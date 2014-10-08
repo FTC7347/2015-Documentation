@@ -1,0 +1,73 @@
+Alex Iverson
+
+2014-10-06
+
+Git, \LaTeX, Engineering Notebook, and Calculations
+
+\begin{tabular}{|p{5cm}|p{5cm}|}
+ \hline
+ Setting up Git
+ &
+ I walked the team through the process of creating github accounts, installing git, and configuring it. This was not very smooth, and I still have work to do making sure everyone is able to use these tools well. Ideally we would have done this in the preseason.
+ \\
+ \hline
+ Setting up \LaTeX
+ &
+ I walked the team through installing MiKTeX. This went relatively smoothly, but there is still a ways to go before everyone is able to use \LaTeX and the editing environment well.
+ \\
+ \hline
+ Converting the Engineering Notebook.
+ &
+ I created the basic file structure for the Engineering Notebook and began converting the entries into \LaTeX.
+ \\
+ \hline
+ Calculations for the slingshot scorer
+ &
+ I ran calculations for the theoretical maximum rate of fire that could be achieved based on the motors' power output. The results suggest that the design is plausible, but it is sufficiently close that I will refrain from judgement until we have a demonstrable prototype.
+ \\
+ \hline
+\end{tabular}
+
+The Git Bash and MiKTeX are now installed on our team's computers. We will be writing our Engineering Notebook in \LaTeX because it is a better system to write technical documents in than the Google Doc we started with. Git's distributed source control allows us to collaborate more effectively and reduces conflicts from concurrent editing. It will also allow us to maintain source control even when we don't have internet access like at a tournament.
+
+\medskip 
+
+Here are the calculations for the slingshot:
+
+Motor load current draw = 0.91A
+
+Motor voltage = 12V
+
+Motor power = $0.91\rm{A}\cdot12\rm{V} = 10.92\rm{W}$
+
+Mass of large ball = 28.9g = 0.0289kg
+
+Density of polycarbonate = $1.22\frac{\rm{g}}{\rm{cm}^3}$
+
+Thickness of plastic = $0.125\rm{in}$ = $0.3175\rm{cm}$
+
+Diameter of large ball = $2.8\rm{in}$ = $7.112\rm{cm}$
+
+$\Delta \rm{height} = 120\rm{cm} = 1.2\rm{m}$
+
+\[\Delta U = m g \Delta h = 0.34\rm{J}\]
+
+\[t = \frac{\Delta U}{P} = 0.031\rm{s}\]
+
+\[f = \frac{1}{t} = 32\rm{Hz}\]
+
+\[K = \frac{1}{2} m v^2 = 0.34\rm{J}\]
+
+\[v = \sqrt{\frac{2 K}{m}} = 4.9\frac{\rm{m}}{\rm{s}}\]
+
+\[m_{\rm{plastic}} = (1.5 \cdot 7.112\rm{cm})^2 \cdot 0.3175\rm{cm} \cdot 1.22\frac{\rm{g}}{\rm{cm}^3}
+ = 44\rm{g}
+\]
+
+\[K_{\rm{plastic}} = \frac{1}{2} m_{\rm{plastic}} v^2 = 0.529\rm{J}\]
+
+\[K_{\rm{total}} = 0.34\rm{J} + 0.529\rm{J} = 0.869\rm{J}\]
+
+\[t = \frac{K_{\rm{total}}}{P} = 0.079\rm{s}\]
+
+\[f = \frac{1}{t} = 12.5\rm{Hz}\]
