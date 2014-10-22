@@ -1,0 +1,53 @@
+Nick Vosseteig
+
+2014-10-17
+
+helping other teams, testing, logo design.
+
+\begin{tabular}{|p{5cm}|p{5cm}|}
+ \hline
+ Helping other teams&
+This week I helped other teams by creating some more sample code.I also built a simple model showing how wiring works. It has a servo controller and a dc controller so that I can show off the sample programs with it. 
+ \\
+ \hline
+testing&
+We continued testing the surgical tubing as well as began building a prototype for the intake device.
+ \\
+ \hline
+ logo design&
+I made a logo for our team this week.
+ \\
+ \hline
+\end{tabular}
+
+\section*{Helping other teams}
+This week I created another sample program that uses the logitech controller to control the motors. 
+\begin{code}	
+#include "JoystickDriver.c"
+
+task main()
+{
+
+	while(true)
+	{
+		//each stick controls a motor
+		getJoystickSettings(joystick);
+
+		if(joystick.joy1_y1<20 && joystick.joy1_y1>-20){
+			motor[dc1] = 0;
+			}else{
+			motor[dc1] = joystick.joy1_y1;
+		}
+	}
+}
+\end{code}
+The code shows people how to move the motors using the joystick, demonstrates using a deadzone for the joystick, and shows them how to use dc motors.
+
+\section*{Logo Design}
+I created a logo for our team - Children of the Matrix. The logo has a brain, with one half being organic and the other half looking like part of a computer. Children of the matrix means people who can connect to the internet with thier minds, so I found the brain with two sections fitting. I also added in the two prominent letters from our name into the brain: C on the organic side of the brain and M on the technological side.
+Here is a picture of the logo:
+
+
+\begin{center}
+ \includegraphics[width=10cm]{./Entries/Images/logo.png}
+\end{center}
