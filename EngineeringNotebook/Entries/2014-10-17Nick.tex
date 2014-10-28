@@ -21,26 +21,10 @@ I made a logo for our team this week.
 \end{tabular}
 
 \section*{Helping other teams}
-This week I created another sample program that uses the logitech controller to control the motors. 
-\begin{code}	
-#include "JoystickDriver.c"
+This week I created another sample program that uses the logitech controller to control the motors.
 
-task main()
-{
+\lstinputlisting[style = RobotC]{DCTest.c}
 
-	while(true)
-	{
-		//each stick controls a motor
-		getJoystickSettings(joystick);
-
-		if(joystick.joy1_y1<20 && joystick.joy1_y1>-20){
-			motor[dc1] = 0;
-			}else{
-			motor[dc1] = joystick.joy1_y1;
-		}
-	}
-}
-\end{code}
 The code shows people how to move the motors using the joystick, demonstrates using a deadzone for the joystick, and shows them how to use dc motors.
 
 \section*{Logo Design}
