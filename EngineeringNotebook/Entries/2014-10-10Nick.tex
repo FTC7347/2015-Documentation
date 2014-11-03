@@ -24,25 +24,9 @@ We tested out the surgical tubing by using a makeshift launcher with 2 chairs an
 
 \section*{Helping other teams}
 Helping the other teams with programming is something that I've been working on alot and this week I came up with some short sample code to show them:
-\begin{listing}	
-	#include "JoystickDriver.c"
 
-	task main()
-	{
+\lstinputlisting[style = RobotC]{ServoTest.c}
 
-		while(true)
-		{
-			//each stick controls a motor
-			getJoystickSettings(joystick);
-			if(joy1Btn(1)){
-				servo[servo1] = 255;
-			}
-			if(joy1Btn(2)){
-				servo[servo1] = 0;
-			}
-		}
-	}
-\end{listing}
 It's very simple code, but it helps them to understand how to set up their code and allows them to understand this simple code on how to use a servo motor with the joystick controller.
 
 \section*{Testing}
@@ -51,4 +35,4 @@ We tested out the surgical tubing, but the problem is whether we should use a lo
 \begin{center}
 % \includegraphics[width=10cm]{./Entries/Images/launcher.png}
  %launcher.png: 740x709 pixel, 90dpi, 20.89x20.01 cm, bb=0 0 592 567
-%\end{center}
+\end{center}
