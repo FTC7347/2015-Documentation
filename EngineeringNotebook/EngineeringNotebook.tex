@@ -1,6 +1,21 @@
 \documentclass[a4paper,10pt]{article}
+
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{courier}
+
+\definecolor{commentGreen}{rgb}{0, 0.6, 0}
+
+\lstdefinestyle{RobotC}{
+ tabsize=2,
+ language = C,
+ basicstyle=\ttfamily,
+ keywordstyle=\color{blue},
+ morekeywords={pragma, include, task, main, while, true},
+ commentstyle=\color{commentGreen}
+}
 
 %opening
 \title{Engineering Notebook}
@@ -49,7 +64,9 @@
 
 \include{./Entries/2014-10-10David}
 
-%\include{./Entries/2014-10-10Nick}
+\include{./Entries/2014-10-10Nick}
+
+\include{./Entries/2014-10-13Alex}
 
 \include{./Entries/2014-10-15Filip}
 
@@ -57,9 +74,19 @@
 
 \include{./Entries/2014-10-17David}
 
-%\include{./Entries/2014-10-17Nick}
+\include{./Entries/2014-10-17Nick}
+
+\include{./Entries/2014-10-20Alex}
 
 \include{./Entries/2014-10-22David}
 >>>>>>> ae1b747a8c7668b246ee0382f2380456a8415cdd
+
+\include{./Entries/2014-10-24Nick}
+
+\include{./Entries/2014-10-27Alex}
+
+\include{./Entries/2014-10-31David}
+
+\include{./Entries/2014-10-31Nick}
 
 \end{document}
