@@ -1,0 +1,51 @@
+Nick Vosseteig
+
+2014-12-12
+
+building, wiring, programming, testing
+
+\begin{tabular}{|p{5cm}|p{5cm}|}
+ \hline
+ building&
+We zip tied down the wiring to keep it out of the way of the spinner permanently. We also finished the grabber on the back to hold the tube. 
+ \\
+ \hline
+wiring&
+In addition to zip tying the wiring to the robot, I also wired the new grabber. 
+ \\
+ \hline
+programming&
+Updated the code to accomodate the new, finished grabber. I also worked with Alex to make the movement more easily controlled.
+ \\
+ \hline
+\end{tabular}
+
+\section*{building}
+We got everything to work smoothly this week with the exception of the new grabber. It uses continuous rotation servos which are not ideal and we will probably switch them out next week for regular servo motors.
+\section*{Wiring}
+We got all the wiring completed and working and then we moved it all out of the way of the spinners so that we could drive the robot wirelessly.
+
+This is the code for the grabber:
+\begin{lstlisting}[style = RobotC]	
+		if(joy1Btn(6)){
+			motor[intake] = -100;
+			motor[launcher] = 100;
+			}else if(joy1Btn(8)){
+			motor[intake] = 100;
+			motor[launcher] = -100;
+			}else{
+			motor[intake] = 0;
+			motor[launcher] = 0;
+		}
+		if(joy1Btn(2)){
+			servo[grabber] = 90;
+		}else if(joy1Btn(1)){
+			servo[grabber] = 180;
+		}else{
+			servo[grabber] = 127;
+		}
+<<<<<<< HEAD
+\end{lstlisting}
+=======
+\end{lstlisting}
+>>>>>>> ac15ad5e12fb69921b59616bef706b4b432e5d42

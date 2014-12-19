@@ -1,0 +1,53 @@
+Nick Vosseteig
+
+2014-10-24
+
+building, wiring, programming
+
+\begin{tabular}{|p{5cm}|p{5cm}|}
+ \hline
+ building&
+This week I built a frame for the robot and added the wheels, using holonomic wheels in the front of the robot to allow it to turn more easily. Matt and David worked on building a prototype for the intake device, but did not complete it. 
+ \\
+ \hline
+wiring&
+I also did all the necessary wiring for the frame so now the 4 dc motors necessary to drive are wired.
+ \\
+ \hline
+programming& I wrote a simple program that allows us to control/test the robot with the logitech controller.
+ \\
+ \hline
+\end{tabular}
+
+\section*{Programming}
+This program allows us to drive the robot frame.
+\begin{lstlisting}[style = RobotC]	
+#include "JoystickDriver.c"
+
+task main()
+{
+	while(true)
+	{
+		getJoystickSettings(joystick);
+
+		if(joystick.joy1_y1<20 && joystick.joy1_y1>-20){
+			motor[left] = 0;
+			motor[left2] = 0;
+			}else{
+			motor[left] = -joystick.joy1_y1/2;
+			motor[left2] = joystick.joy1_y1/2;
+		}
+		if(joystick.joy1_y2<20 && joystick.joy1_y2>-20){
+			motor[right] = 0;
+			motor[right2] = 0;
+			}else{
+			motor[right] = joystick.joy1_y2/2;
+			motor[right2] = joystick.joy1_y2/2;
+		}
+	}
+}
+\end{lstlisting}
+We did not get a chance to test the code out yet, so we will have to do it next week.
+
+\section*{Building and wiring}
+I built and wired the frame of the robot which has 4 dc motors, one for each wheel. The front wheels are 4 holonomic wheels set 2 on each side for stability and better ability to turn. The building and wiring went pretty well since I had done it before and knew what to do. The wires are still a mess, and I need to clean them up in the future.

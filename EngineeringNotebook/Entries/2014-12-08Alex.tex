@@ -1,0 +1,45 @@
+2014-12-8
+
+Alex Iverson
+
+Plastic Parts, Improved Wiring, and Deadlines
+
+\begin{tabular}{|p{5cm}|p{5cm}|}
+ \hline
+ Switching parts from cardboard to plastic.&
+ I fabricated the plastic launcher part. Ben has begun the CAD for the plastic ramp and guide piece.\\
+ \hline
+ Rewiring.&
+ I worked on converting more of the connections to using powerpoles.\\
+ \hline
+ Deadlines&
+ Deadlines are looming and we are going to need to increase our effort even farther to meet them.\\
+ \hline
+\end{tabular}
+
+I used a vertical bandsaw to cut the plastic for our reinforced launcher. It is much stronger and our tests show that it is much more effective than the cardboard prototype.
+It is fabricated from a polycarbonate sheet. We are planning to print the ramp and guides out of ABS.
+
+We took advantage of the downtime of robot testing while the hardware improvments were being developed to change more of the wiring to using powerpoles for ease of maintainance. We soldered pigtails onto the motors which terminated in powerpoles which slightly reduces the space requirements of the motors and increases the strength and reliability of the motor connections.
+
+I created a quadraticaly scaled drive program to test and compare against the linear system currently in use.
+
+\begin{lstlisting}[style = RobotC]
+  int leftIn = joystick.joy1_y1;
+  int leftPwr = leftIn*leftIn;
+  if (leftIn < 0) {
+    leftPwr = -leftPwr;
+  }
+  motor[left] = leftPwr;
+  motor[left2] = leftPwr;
+  int rightIn = joystick.joy1_y2;
+  int rightPwr = rightIn*rightIn;
+  if (rightIn < 0) {
+    rightPwr = -rightPwr;
+  }
+  motor[right] = rightPwr;
+  motor[right2] = rightPwr;
+\end{lstlisting}
+
+
+We have started to organize meetings after school in order to increase productivity. Although we have been able to make quite a bit of progress during the longer after school meetings, we still will not be able to meet our deadlines unless we make our schedule even more agressive.
