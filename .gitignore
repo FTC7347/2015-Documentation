@@ -3,4 +3,5 @@
 *~
 *.log
 **/Thumbs.db
-*.gz
+*.synctex.gz
+*.synctex.gz(busy)
