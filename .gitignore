@@ -1,6 +1,7 @@
 *.aux
 *.backup
 *~
+*#
 *.log
 **/Thumbs.db
 *.synctex.gz
